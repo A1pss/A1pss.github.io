@@ -1,53 +1,19 @@
-# WhatATheme
-**WhatATheme** is a customizable Jekyll Portfolio theme which supports blogging. You can use this theme in order to create an elegant, fully responsive portfolio.
+# Alps's Blog
 
-#### You can checkout the [**Demo Here**](https://thedevslot.github.io/WhatATheme/) :boom:
+Alps的博客搭建
 
-![WhatATheme](assets/images/meta.jpg)
+[![License](https://img.shields.io/github/license/A1pss/A1pss.github.io)](https://github.com/A1pss/A1pss.github.io)
+[![Issues](https://img.shields.io/github/issues/A1pss/A1pss.github.io)](https://github.com/A1pss/A1pss.github.io/issues)
+[![Stars](https://img.shields.io/github/stars/A1pss/A1pss.github.io)](https://github.com/A1pss/A1pss.github.io)
 
-# Features :sparkles:
-* Free and Easy setup
-* No Coding Required
-* Compatible with [Github Pages](https://pages.github.com/)
-* Responsive and Blogging Ready
-* HTML Compressor using [Jekyll Compress HTML](https://jch.penibelst.de/)
-* Minified CSS using SaSS
-* CMS Admin Support using [Jekyll Admin](https://jekyll.github.io/jekyll-admin/)
-* Supports Latest [Jekyll 4.x](https://jekyllrb.com/) and [Bundler](https://bundler.io/)
-* Stylesheet built using SaSS
-* Comments using Disqus
-* Analytics using Google Analytics
-* Instant Search using [Simple Jekyll Search](https://github.com/christian-fei/Simple-Jekyll-Search/)
+> (如果喜欢请star而非fork
 
-# Installation :books:
-### System Requirements
-* [Ruby](https://www.ruby-lang.org/en/)
-* [Jekyll](https://jekyllrb.com/)
-> You can read **What is Jekyll** [**here**](https://thedevslot.github.io/WhatATheme/blog/what-is-jekyll-how-to-use-it)
-### Up and Running
-* Fork the [Repository](https://github.com/thedevslot/WhatATheme/)
-* Clone or download the repository into directory of your choice: `git clone https://github.com/thedevslot/WhatATheme.git`
-* Inside the directory run `bundle install`
-* Host WhatATheme locally by running `bundle exec jekyll s`
 
-> You can read **How to Install and use WhatATheme?** [**here**](https://thedevslot.github.io/WhatATheme/blog/how-to-install-whatatheme)
 
-[<img src="https://i.imgur.com/TVI946Z.png" width="250" />](https://youtu.be/VfPa2c9kwhQ)
+第一次写博客，没什么经验，只有语文功底 : )，不知道能坚持到什么时候，所以写点初心让自己能坚持下去
+- 记录学习生活，这么长时间干了什么，是充实亦或虚度光阴
+- 记录学到的技术，或大或小，或有用或没啥用（有次学会了给电脑清流氓弹窗软件，之后有次需要的时候结果忘了还得重查 : (
+- 做点小项目，写点小想法
+- 暂时想到这些，但足够支撑我写下去！
+5. 秒内说出8句英文Can you try? (bushi
 
----
-
-### Content Credits :green_heart:
-* [Hero Image](https://images.pexels.com/photos/220444/pexels-photo-220444.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) used as a background image in the very first section of Homepage.
-* [Author Image](https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png) used in the Author Section.
-* [Font Awesome](https://fontawesome.com/)
-* [Poppins Font](https://fonts.google.com/specimen/Poppins)
-* [Memphis Pattern](https://www.freepik.com/free-vector/memphis-pattern-background_4034913.htm#page=1&query=memphis%20pattern&position=23) used for some Social Media Images and the Favicon.
-
----
-
-### Credits :bulb:
-* [Sneha Omer](http://sassyecoder.github.io/)
-* [Harsh Trivedi](http://harsh98trivedi.github.io/)
-
-### License
-The contents of this repository are licensed under the [**GNU General Public License v2.0**](https://github.com/thedevslot/WhatATheme/blob/master/LICENSE)
