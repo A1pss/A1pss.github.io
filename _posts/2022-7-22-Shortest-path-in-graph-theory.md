@@ -33,16 +33,16 @@ tags:
 ### 无向图的权重邻接矩阵
 
 <img src="https://alps-images.obs.cn-east-2.myhuaweicloud.com/img/image-20230722143856150.png" alt="image-20230722143856150" style="zoom: 33%;" />
-$$
-D=\begin{bmatrix} 0 & Inf & 3 & 3 \\ Inf & 0 & Inf & 5 \\ 3 & Inf & 0 & 2 \\ 3 & 5 & 2 & 0\end{bmatrix}
-$$
+
+![](https://www.zhihu.com/equation?tex=%0AD%3D%5Cbegin%7Bbmatrix%7D%200%20%26%20Inf%20%26%203%20%26%203%20%5C%5C%20Inf%20%26%200%20%26%20Inf%20%26%205%20%5C%5C%203%20%26%20Inf%20%26%200%20%26%202%20%5C%5C%203%20%26%205%20%26%202%20%26%200%5Cend%7Bbmatrix%7D%0A)
+
 
 ### 有向图的邻接矩阵
 
 <img src="https://alps-images.obs.cn-east-2.myhuaweicloud.com/img/image-20230722143910828.png" alt="image-20230722143910828" style="zoom:33%;" />
-$$
-D=\begin{bmatrix} 0 & Inf & 8 & 3 \\ Inf & 0 & Inf & 5 \\ 8 & Inf & 0 & 2 \\ Inf & Inf & Inf & 0\end{bmatrix}
-$$
+
+![](https://www.zhihu.com/equation?tex=%0AD%3D%5Cbegin%7Bbmatrix%7D%200%20%26%20Inf%20%26%208%20%26%203%20%5C%5C%20Inf%20%26%200%20%26%20Inf%20%26%205%20%5C%5C%208%20%26%20Inf%20%26%200%20%26%202%20%5C%5C%20Inf%20%26%20Inf%20%26%20Inf%20%26%200%5Cend%7Bbmatrix%7D%0A)
+
 
 ## 迪杰斯特拉(Dijkstra)算法
 

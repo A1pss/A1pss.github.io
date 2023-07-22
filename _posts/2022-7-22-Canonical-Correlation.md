@@ -27,78 +27,83 @@ tags:
 #### 典型相关分析的基本思想(略)
 
 假设两组变量分别为: 
-$$
-X^{(1)}=(X_1^{(1)},X_2^{(1)},\cdots,X_p^{(1)}),\ X^{(2)}=(X_1^{(2)},X_2^{(2)},\cdots,X_q^{(2)})
-$$
-分别在两组变量中选取若干有代表性的综合变量 $U_i,V_i$，使得，每一个综合变量是原变量的线性组合，即
-$$
-U_i=a_1^{(i)}X_1^{(1)}+a_2^{(i)}X_2^{(1)}+\cdots+a_p^{(i)}X_p^{(1)}\triangleq a^{(i)'}X^{(1)}\\V_i=b_1^{(i)}X_1^{(2)}+b_2^{(i)}X_2^{(2)}+\cdots+b_q^{(i)}X_q^{(2)}\triangleq b^{(i)'}X^{(2)}
-$$
-第一组在$var(U_1)=var(V_1)=1$满足的条件下，找到$a^{(1)}$和$b^{(1)}$两组系数，使得$\rho(U_1,V_1)$最大。
 
-被选出的线性组合称为==典型变量==，他们的相关系数称为==典型相关系数==。
+![](https://www.zhihu.com/equation?tex=%0AX%5E%7B%281%29%7D%3D%28X_1%5E%7B%281%29%7D%2CX_2%5E%7B%281%29%7D%2C%5Ccdots%2CX_p%5E%7B%281%29%7D%29%2C%5C%20X%5E%7B%282%29%7D%3D%28X_1%5E%7B%282%29%7D%2CX_2%5E%7B%282%29%7D%2C%5Ccdots%2CX_q%5E%7B%282%29%7D%29%0A)
+
+分别在两组变量中选取若干有代表性的综合变量 ![](https://www.zhihu.com/equation?tex=U_i%2CV_i)，使得，每一个综合变量是原变量的线性组合，即
+
+![](https://www.zhihu.com/equation?tex=%0AU_i%3Da_1%5E%7B%28i%29%7DX_1%5E%7B%281%29%7D%2Ba_2%5E%7B%28i%29%7DX_2%5E%7B%281%29%7D%2B%5Ccdots%2Ba_p%5E%7B%28i%29%7DX_p%5E%7B%281%29%7D%5Ctriangleq%20a%5E%7B%28i%29%27%7DX%5E%7B%281%29%7D%5C%5CV_i%3Db_1%5E%7B%28i%29%7DX_1%5E%7B%282%29%7D%2Bb_2%5E%7B%28i%29%7DX_2%5E%7B%282%29%7D%2B%5Ccdots%2Bb_q%5E%7B%28i%29%7DX_q%5E%7B%282%29%7D%5Ctriangleq%20b%5E%7B%28i%29%27%7DX%5E%7B%282%29%7D%0A)
+
+第一组在![](https://www.zhihu.com/equation?tex=var%28U_1%29%3Dvar%28V_1%29%3D1)满足的条件下，找到![](https://www.zhihu.com/equation?tex=a%5E%7B%281%29%7D)和![](https://www.zhihu.com/equation?tex=b%5E%7B%281%29%7D)两组系数，使得![](https://www.zhihu.com/equation?tex=%5Crho%28U_1%2CV_1%29)最大。
+
+被选出的线性组合称为**典型变量**，他们的相关系数称为**典型相关系数**。
 
 还需要保证两组的信息不相关:
-$$
-cov(U_1,U_2)=cov(V_1,V_2)=0
-$$
+
+![](https://www.zhihu.com/equation?tex=%0Acov%28U_1%2CU_2%29%3Dcov%28V_1%2CV_2%29%3D0%0A)
+
 
 > 注: 综合变量的组数是不确定的，如果第一组就能代表原数据样本大部分的信息，那么一组就够。
 >
 
 #### 典型相关分析原理及方法(详)
 
-- 设有两组随机变量，$X^{(1)}$代表第一组的p个变量，$X^{(2)}$代表第二组的q个变量，假设$p\leqslant q$。令
-  $$
-  Cov(X^{(1)})=\Sigma_{11},\\Cov(X^{(2)})=\Sigma_{22},\\Cov(X^{(1)},X^{(2)})=\Sigma_{12}=\Sigma_{21}'\\\therefore Cov(X,X)=\begin{bmatrix} \mathop{\Sigma_{11}} \limits_{(p\times p)} & \mathop{\Sigma_{12}} \limits_{(p\times p)} \\ \mathop{\Sigma_{21}} \limits_{(p\times p)} & \mathop{\Sigma_{22}} \limits_{(p\times p)} \end{bmatrix}
-  $$
+- 设有两组随机变量，![](https://www.zhihu.com/equation?tex=X%5E%7B%281%29%7D)代表第一组的p个变量，![](https://www.zhihu.com/equation?tex=X%5E%7B%282%29%7D)代表第二组的q个变量，假设![](https://www.zhihu.com/equation?tex=p%5Cleqslant%20q)。令
   
+
+![](https://www.zhihu.com/equation?tex=%0A%20%20Cov%28X%5E%7B%281%29%7D%29%3D%5CSigma_%7B11%7D%2C%5C%5CCov%28X%5E%7B%282%29%7D%29%3D%5CSigma_%7B22%7D%2C%5C%5CCov%28X%5E%7B%281%29%7D%2CX%5E%7B%282%29%7D%29%3D%5CSigma_%7B12%7D%3D%5CSigma_%7B21%7D%27%5C%5C%5Ctherefore%20Cov%28X%2CX%29%3D%5Cbegin%7Bbmatrix%7D%20%5Cmathop%7B%5CSigma_%7B11%7D%7D%20%5Climits_%7B%28p%5Ctimes%20p%29%7D%20%26%20%5Cmathop%7B%5CSigma_%7B12%7D%7D%20%5Climits_%7B%28p%5Ctimes%20p%29%7D%20%5C%5C%20%5Cmathop%7B%5CSigma_%7B21%7D%7D%20%5Climits_%7B%28p%5Ctimes%20p%29%7D%20%26%20%5Cmathop%7B%5CSigma_%7B22%7D%7D%20%5Climits_%7B%28p%5Ctimes%20p%29%7D%20%5Cend%7Bbmatrix%7D%0A%20%20)
+
+
 - 设两组变量的线性组合分别为：
-  $$
-  U=a_1X_1^{(1)}+a_2X_2^{(1)}+\cdots+a_pX_p^{(1)}\triangleq a'X^{(1)}\\V=b_1X_1^{(2)}+b_2X_2^{(2)}+\cdots+b_qX_q^{(2)}\triangleq b'X^{(2)}
-  $$
-  易见
-  $$
-  D(U)=D(a'X^{(1)})=a'Cov(X^{(1)},X^{(1)})a=a'\Sigma_{11}a=1\\D(V)=D(b'X^{(2)})=b'Cov(X^{(2)},X^{(2)})b=b'\Sigma_{11}b=1\\Cov(U,V)=a'Cov(X^{(1)},X^{(2)})b=a'\Sigma_{12}b\\Corr(U,V)=\frac{Cov(U,V)}{\sqrt{D(U)}\sqrt{D(V)}}=\frac{a'\Sigma_{12}b}{\sqrt{a'\Sigma_{11}a}\sqrt{b'\Sigma_{22}b}}
-  \\\therefore Corr(U,V)=a'\Sigma_{12}b
-  $$
   
-- 问题就变成在U和V的方差为一的约束条件下，求使$Corr(U,V)=a'\Sigma_{12}b$达到最大的系数向量a与b。
+
+![](https://www.zhihu.com/equation?tex=%0A%20%20U%3Da_1X_1%5E%7B%281%29%7D%2Ba_2X_2%5E%7B%281%29%7D%2B%5Ccdots%2Ba_pX_p%5E%7B%281%29%7D%5Ctriangleq%20a%27X%5E%7B%281%29%7D%5C%5CV%3Db_1X_1%5E%7B%282%29%7D%2Bb_2X_2%5E%7B%282%29%7D%2B%5Ccdots%2Bb_qX_q%5E%7B%282%29%7D%5Ctriangleq%20b%27X%5E%7B%282%29%7D%0A%20%20)
+
+  易见
+
+![](https://www.zhihu.com/equation?tex=%0A%20%20D%28U%29%3DD%28a%27X%5E%7B%281%29%7D%29%3Da%27Cov%28X%5E%7B%281%29%7D%2CX%5E%7B%281%29%7D%29a%3Da%27%5CSigma_%7B11%7Da%3D1%5C%5CD%28V%29%3DD%28b%27X%5E%7B%282%29%7D%29%3Db%27Cov%28X%5E%7B%282%29%7D%2CX%5E%7B%282%29%7D%29b%3Db%27%5CSigma_%7B11%7Db%3D1%5C%5CCov%28U%2CV%29%3Da%27Cov%28X%5E%7B%281%29%7D%2CX%5E%7B%282%29%7D%29b%3Da%27%5CSigma_%7B12%7Db%5C%5CCorr%28U%2CV%29%3D%5Cfrac%7BCov%28U%2CV%29%7D%7B%5Csqrt%7BD%28U%29%7D%5Csqrt%7BD%28V%29%7D%7D%3D%5Cfrac%7Ba%27%5CSigma_%7B12%7Db%7D%7B%5Csqrt%7Ba%27%5CSigma_%7B11%7Da%7D%5Csqrt%7Bb%27%5CSigma_%7B22%7Db%7D%7D%0A%20%20%5C%5C%5Ctherefore%20Corr%28U%2CV%29%3Da%27%5CSigma_%7B12%7Db%0A%20%20)
+
+
+- 问题就变成在U和V的方差为一的约束条件下，求使![](https://www.zhihu.com/equation?tex=Corr%28U%2CV%29%3Da%27%5CSigma_%7B12%7Db)达到最大的系数向量a与b。
 
 - 根据条件极值的求法引入Lagrange乘数，将问题转化为求
-  $$
-  \phi(a,b)=a'\Sigma_{12}b-\frac{\lambda}{2}(a'\Sigma_{11}a-1)-\frac{\nu}{2}(b'\Sigma_{22}b-1)
-  $$
-  的极大值，其中$\lambda,\nu$是Lagrange乘数。
+  
 
-- 根据求极值的必要条件得$\cases{\frac{\partial\phi}{\partial a}=\Sigma_{12}b-\lambda\Sigma_{11}a=0\\\frac{\partial\phi}{\partial a}=\Sigma_{21}b-\lambda\Sigma_{22}a=0}$
-  $$
-  \Rightarrow \cases{\Sigma_{12}b-\lambda\Sigma_{11}a=0\\\Sigma_{21}b-\lambda\Sigma_{22}a=0}
-  $$
+![](https://www.zhihu.com/equation?tex=%0A%20%20%5Cphi%28a%2Cb%29%3Da%27%5CSigma_%7B12%7Db-%5Cfrac%7B%5Clambda%7D%7B2%7D%28a%27%5CSigma_%7B11%7Da-1%29-%5Cfrac%7B%5Cnu%7D%7B2%7D%28b%27%5CSigma_%7B22%7Db-1%29%0A%20%20)
+
+  的极大值，其中![](https://www.zhihu.com/equation?tex=%5Clambda%2C%5Cnu)是Lagrange乘数。
+
+- 根据求极值的必要条件得![](https://www.zhihu.com/equation?tex=%5Ccases%7B%5Cfrac%7B%5Cpartial%5Cphi%7D%7B%5Cpartial%20a%7D%3D%5CSigma_%7B12%7Db-%5Clambda%5CSigma_%7B11%7Da%3D0%5C%5C%5Cfrac%7B%5Cpartial%5Cphi%7D%7B%5Cpartial%20a%7D%3D%5CSigma_%7B21%7Db-%5Clambda%5CSigma_%7B22%7Da%3D0%7D)
+  
+
+![](https://www.zhihu.com/equation?tex=%0A%20%20%5CRightarrow%20%5Ccases%7B%5CSigma_%7B12%7Db-%5Clambda%5CSigma_%7B11%7Da%3D0%5C%5C%5CSigma_%7B21%7Db-%5Clambda%5CSigma_%7B22%7Da%3D0%7D%0A%20%20)
+
 
   > [常用的向量矩阵求导公式](https://blog.csdn.net/lipengcn/articla/details/52815429)
 
 - 假定个随机变量协差阵的逆矩阵存在，得：
-  $$
-  \cases{(\Sigma_{11}^{-1}\Sigma_{12}\Sigma_{22}^{-1}\Sigma_{21}-\lambda^2I_p)a=0 \\ (\Sigma_{22}^{-1}\Sigma_{21}\Sigma_{11}^{-1}\Sigma_{12}-\lambda^2I_q)b=0}
-  $$
-  ==令$A=\Sigma_{11}^{-1}\Sigma_{12}\Sigma_{22}^{-1}\Sigma_{21}$， $B=\Sigma_{22}^{-1}\Sigma_{21}\Sigma_{11}^{-1}\Sigma_{12}$==  (其中A为p\*p阶矩阵，B为q\*q阶矩阵)
+  
 
-  其中$\lambda^2$为A和B的特征根，a,b则是对应的特征向量。
+![](https://www.zhihu.com/equation?tex=%0A%20%20%5Ccases%7B%28%5CSigma_%7B11%7D%5E%7B-1%7D%5CSigma_%7B12%7D%5CSigma_%7B22%7D%5E%7B-1%7D%5CSigma_%7B21%7D-%5Clambda%5E2I_p%29a%3D0%20%5C%5C%20%28%5CSigma_%7B22%7D%5E%7B-1%7D%5CSigma_%7B21%7D%5CSigma_%7B11%7D%5E%7B-1%7D%5CSigma_%7B12%7D-%5Clambda%5E2I_q%29b%3D0%7D%0A%20%20)
 
-- 因为$\lambda=a'\Sigma_{12}b=Corr(U,V)$，求Corr(U,V)最大值也就是求$\lambda$的最大值，也就是求A和B得最大特征根的开平方
+  令![](https://www.zhihu.com/equation?tex=A%3D%5CSigma_%7B11%7D%5E%7B-1%7D%5CSigma_%7B12%7D%5CSigma_%7B22%7D%5E%7B-1%7D%5CSigma_%7B21%7D)， ![](https://www.zhihu.com/equation?tex=B%3D%5CSigma_%7B22%7D%5E%7B-1%7D%5CSigma_%7B21%7D%5CSigma_%7B11%7D%5E%7B-1%7D%5CSigma_%7B12%7D)  (其中A为p\*p阶矩阵，B为q\*q阶矩阵)
+
+  其中![](https://www.zhihu.com/equation?tex=%5Clambda%5E2)为A和B的特征根，a,b则是对应的特征向量。
+
+- 因为![](https://www.zhihu.com/equation?tex=%5Clambda%3Da%27%5CSigma_%7B12%7Db%3DCorr%28U%2CV%29)，求Corr(U,V)最大值也就是求![](https://www.zhihu.com/equation?tex=%5Clambda)的最大值，也就是求A和B得最大特征根的开平方
 
   可证明：A和B具有相同非零特征根，且所有特征根非负，位于0~1之间
 
-- 因此，我们得到 $a^{(1)}=(a_1^{(1)},a_2^{(1)},\cdots,a_p^{(1)}),\ a^{(2)}=(a_1^{(2)},a_2^{(2)},\cdots,a_q^{(2)})$ 就是所求的典型变量的系数向量，我们称
-  $$
-  U_1=a^{(1)'}X^{(1)}=a_1^{(1)}X_1^{(1)}+a_2^{(1)}X_2^{(1)}+\cdots+a_p^{(1)}X_p^{(1)}\\V_1= b^{(1)'}X^{(2)}=b_1^{(1)}X_1^{(2)}+b_2^{(1)}X_2^{(2)}+\cdots+b_q^{(1)}X_q^{(2)}
-  $$
-  为第一对典型变量，最大特征根的平方根$\lambda_1$即为两典型变量的相关系数，我们称其为第一典型相关系数。
+- 因此，我们得到 ![](https://www.zhihu.com/equation?tex=a%5E%7B%281%29%7D%3D%28a_1%5E%7B%281%29%7D%2Ca_2%5E%7B%281%29%7D%2C%5Ccdots%2Ca_p%5E%7B%281%29%7D%29%2C%5C%20a%5E%7B%282%29%7D%3D%28a_1%5E%7B%282%29%7D%2Ca_2%5E%7B%282%29%7D%2C%5Ccdots%2Ca_q%5E%7B%282%29%7D%29) 就是所求的典型变量的系数向量，我们称
+  
 
-- 如果第一典型变量不足以代表两组原始变量的信息，则需要第二对典型变量除需要满足$D(U_2)=D(V_2)=1$外，还要增加约束条件: $cov(U_1,U_2)=cov(V_1,V_2)=0$
+![](https://www.zhihu.com/equation?tex=%0A%20%20U_1%3Da%5E%7B%281%29%27%7DX%5E%7B%281%29%7D%3Da_1%5E%7B%281%29%7DX_1%5E%7B%281%29%7D%2Ba_2%5E%7B%281%29%7DX_2%5E%7B%281%29%7D%2B%5Ccdots%2Ba_p%5E%7B%281%29%7DX_p%5E%7B%281%29%7D%5C%5CV_1%3D%20b%5E%7B%281%29%27%7DX%5E%7B%282%29%7D%3Db_1%5E%7B%281%29%7DX_1%5E%7B%282%29%7D%2Bb_2%5E%7B%281%29%7DX_2%5E%7B%282%29%7D%2B%5Ccdots%2Bb_q%5E%7B%281%29%7DX_q%5E%7B%282%29%7D%0A%20%20)
 
-  那么$\lambda_2$为第二典型相关系数，对相应的$U_2=a^{(2)'}X^{(1)},\ V_2=b^{(2)'}X^{(2)}$为第二对典型变量。
+  为第一对典型变量，最大特征根的平方根![](https://www.zhihu.com/equation?tex=%5Clambda_1)即为两典型变量的相关系数，我们称其为第一典型相关系数。
+
+- 如果第一典型变量不足以代表两组原始变量的信息，则需要第二对典型变量除需要满足![](https://www.zhihu.com/equation?tex=D%28U_2%29%3DD%28V_2%29%3D1)外，还要增加约束条件: ![](https://www.zhihu.com/equation?tex=cov%28U_1%2CU_2%29%3Dcov%28V_1%2CV_2%29%3D0)
+
+  那么![](https://www.zhihu.com/equation?tex=%5Clambda_2)为第二典型相关系数，对相应的![](https://www.zhihu.com/equation?tex=U_2%3Da%5E%7B%282%29%27%7DX%5E%7B%281%29%7D%2C%5C%20V_2%3Db%5E%7B%282%29%27%7DX%5E%7B%282%29%7D)为第二对典型变量。
 
   类似的，一次可求出第r对典型变量和典型相关系数。
 
@@ -106,30 +111,31 @@ $$
 
 #### 典型相关系数的显著性检验
 
-1. (在论文中直接说)假设$\begin{bmatrix} X^{(1)} \\ X^{(2)} \end{bmatrix}$服从正态分布$N_{p+q}(\mu,\Sigma)$，从该总体中抽取样本容量为n的样本，得到下列数据矩阵：
-   $$
-   X^{(1)}=\begin{bmatrix} X_{11}^{(1)} & X_{12}^{(1)} & \cdots & X_{1p}^{(1)} \\ X_{21}^{(1)} & X_{22}^{(1)} & \cdots & X_{2p}^{(1)} \\ \vdots & \vdots & \ddots & 
-   \vdots \\ X_{n1}^{(1)} & X_{n2}^{(1)} & \cdots & X_{np}^{(1)} \end{bmatrix}
-   $$
+1. (在论文中直接说)假设![](https://www.zhihu.com/equation?tex=%5Cbegin%7Bbmatrix%7D%20X%5E%7B%281%29%7D%20%5C%5C%20X%5E%7B%282%29%7D%20%5Cend%7Bbmatrix%7D)服从正态分布![](https://www.zhihu.com/equation?tex=N_%7Bp%2Bq%7D%28%5Cmu%2C%5CSigma%29)，从该总体中抽取样本容量为n的样本，得到下列数据矩阵：
+   
 
-   $$
-   X^{(2)}=\begin{bmatrix} X_{11}^{(2)} & X_{12}^{(2)} & \cdots & X_{1p}^{(2)} \\ X_{21}^{(2)} & X_{22}^{(2)} & \cdots & X_{2p}^{(2)} \\ \vdots & \vdots & \ddots & 
-   \vdots \\ X_{n1}^{(2)} & X_{n2}^{(2)} & \cdots & X_{np}^{(2)} \end{bmatrix}
-   $$
+![](https://www.zhihu.com/equation?tex=%0A%20%20%20X%5E%7B%281%29%7D%3D%5Cbegin%7Bbmatrix%7D%20X_%7B11%7D%5E%7B%281%29%7D%20%26%20X_%7B12%7D%5E%7B%281%29%7D%20%26%20%5Ccdots%20%26%20X_%7B1p%7D%5E%7B%281%29%7D%20%5C%5C%20X_%7B21%7D%5E%7B%281%29%7D%20%26%20X_%7B22%7D%5E%7B%281%29%7D%20%26%20%5Ccdots%20%26%20X_%7B2p%7D%5E%7B%281%29%7D%20%5C%5C%20%5Cvdots%20%26%20%5Cvdots%20%26%20%5Cddots%20%26%20%0A%20%20%20%5Cvdots%20%5C%5C%20X_%7Bn1%7D%5E%7B%281%29%7D%20%26%20X_%7Bn2%7D%5E%7B%281%29%7D%20%26%20%5Ccdots%20%26%20X_%7Bnp%7D%5E%7B%281%29%7D%20%5Cend%7Bbmatrix%7D%0A%20%20%20)
+
+
+
+![](https://www.zhihu.com/equation?tex=%0A%20%20%20X%5E%7B%282%29%7D%3D%5Cbegin%7Bbmatrix%7D%20X_%7B11%7D%5E%7B%282%29%7D%20%26%20X_%7B12%7D%5E%7B%282%29%7D%20%26%20%5Ccdots%20%26%20X_%7B1p%7D%5E%7B%282%29%7D%20%5C%5C%20X_%7B21%7D%5E%7B%282%29%7D%20%26%20X_%7B22%7D%5E%7B%282%29%7D%20%26%20%5Ccdots%20%26%20X_%7B2p%7D%5E%7B%282%29%7D%20%5C%5C%20%5Cvdots%20%26%20%5Cvdots%20%26%20%5Cddots%20%26%20%0A%20%20%20%5Cvdots%20%5C%5C%20X_%7Bn1%7D%5E%7B%282%29%7D%20%26%20X_%7Bn2%7D%5E%7B%282%29%7D%20%26%20%5Ccdots%20%26%20X_%7Bnp%7D%5E%7B%282%29%7D%20%5Cend%7Bbmatrix%7D%0A%20%20%20)
+
 
 2. (不是必须的，3中有重复步骤)在典型相关分析时，就两组变量得相关性进行检验。即检验假设
-   $$
-   H_0:Corr(U,V)=0,\ H_1:Corr(U,V)\neq 0
-   $$
+   
+
+![](https://www.zhihu.com/equation?tex=%0A%20%20%20H_0%3ACorr%28U%2CV%29%3D0%2C%5C%20H_1%3ACorr%28U%2CV%29%5Cneq%200%0A%20%20%20)
+
    p值小于0.05(0.1)表示在95%(90%)的置信水平下拒绝原假设，即认为两组变量有关。
 
 3. 对典型相关系数进行检验。检验假设为：
-   $$
-   H_0:\lambda_{k+1}=\lambda_{k+2}=\cdots=\lambda_r\\H_1:\lambda_{k+1}\neq 0
-   $$
-   这个检验假设是一个递推的过程，首先看$\lambda_{k+1}$是否等于0，不等于再检验$\lambda_{k+2}$，以此类推，直到遇到等于0的典型相关系数就停止。
+   
 
-   判断$\lambda$是否等于0的方法是看它对应的p值
+![](https://www.zhihu.com/equation?tex=%0A%20%20%20H_0%3A%5Clambda_%7Bk%2B1%7D%3D%5Clambda_%7Bk%2B2%7D%3D%5Ccdots%3D%5Clambda_r%5C%5CH_1%3A%5Clambda_%7Bk%2B1%7D%5Cneq%200%0A%20%20%20)
+
+   这个检验假设是一个递推的过程，首先看![](https://www.zhihu.com/equation?tex=%5Clambda_%7Bk%2B1%7D)是否等于0，不等于再检验![](https://www.zhihu.com/equation?tex=%5Clambda_%7Bk%2B2%7D)，以此类推，直到遇到等于0的典型相关系数就停止。
+
+   判断![](https://www.zhihu.com/equation?tex=%5Clambda)是否等于0的方法是看它对应的p值
 
 #### 利用标准化后的典型相关变量分析问题
 
@@ -139,7 +145,7 @@ $$
 
 指原始变量与典型变量之间相关性分析。
 
-==典型载荷和典型变量对应的相关系数的区别?==
+典型载荷和典型变量对应的相关系数的区别?
 
 #### 冗余分析
 
@@ -147,7 +153,7 @@ $$
 
 由自身几个典型变量解释的方差比例算法：
 
-第一典型变量解释的方差比例$=(\frac{\sum{第一典型变量中的变量^2}}{第一典型变量中变量的个数(p,q)})$
+第一典型变量解释的方差比例![](https://www.zhihu.com/equation?tex=%3D%28%5Cfrac%7B%5Csum%7B%E7%AC%AC%E4%B8%80%E5%85%B8%E5%9E%8B%E5%8F%98%E9%87%8F%E4%B8%AD%E7%9A%84%E5%8F%98%E9%87%8F%5E2%7D%7D%7B%E7%AC%AC%E4%B8%80%E5%85%B8%E5%9E%8B%E5%8F%98%E9%87%8F%E4%B8%AD%E5%8F%98%E9%87%8F%E7%9A%84%E4%B8%AA%E6%95%B0%28p%2Cq%29%7D%29)
 
 第二、第三等典型变量解释的方差比例计算方法同上
 
@@ -159,7 +165,7 @@ $$
 
 2. 检验数据类型
 
-   点击左下角<kbd>变量试图</kbd> ，在“测量”列将数据类型调整
+   点击左下角<kbd>变量视图</kbd> ，在“测量”列将数据类型调整
 
    标度：数字型，例如身高，体重等
 
@@ -188,11 +194,12 @@ $$
      将《标准化/非标准化典型相关系数》表格改为《标准化/非标准化典型相关变量对应的线性组合系数》，变量1, 2, 3, ...对应的是第几个典型变量(符合典型相关系数的个数)
 
      然后写成
-     $$
-     U_i^*=a_1^{(i)}X_1^{(1)}+a_2^{(i)}X_2^{(1)}+\cdots+a_p^{(i)}X_p^{(1)}\\V_i^*=b_1^{(i)}X_1^{(2)}+b_2^{(i)}X_2^{(2)}+\cdots+b_q^{(i)}X_q^{(2)}
-     $$
-     的形式(*代表标准化后的典型变量，i代表第i个典型变量)
      
+
+![](https://www.zhihu.com/equation?tex=%0A%20%20%20%20%20U_i%5E%2A%3Da_1%5E%7B%28i%29%7DX_1%5E%7B%281%29%7D%2Ba_2%5E%7B%28i%29%7DX_2%5E%7B%281%29%7D%2B%5Ccdots%2Ba_p%5E%7B%28i%29%7DX_p%5E%7B%281%29%7D%5C%5CV_i%5E%2A%3Db_1%5E%7B%28i%29%7DX_1%5E%7B%282%29%7D%2Bb_2%5E%7B%28i%29%7DX_2%5E%7B%282%29%7D%2B%5Ccdots%2Bb_q%5E%7B%28i%29%7DX_q%5E%7B%282%29%7D%0A%20%20%20%20%20)
+
+     的形式(*代表标准化后的典型变量，i代表第i个典型变量)
+
    - 典型载荷
    
      正数即正相关，负数即负相关，绝对值越大相关性越强

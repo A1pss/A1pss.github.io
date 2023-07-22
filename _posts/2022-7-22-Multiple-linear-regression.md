@@ -97,21 +97,22 @@ tags:
 1. 一元线性回归模型(多元就是一个以上自变量，其他不变)
 
    假设y是因变量，x是自变量，且满足如下线性关系：
-   $$
-   y_i=\beta_0+\beta_1x_1+\mu_i
-   $$
-   $\beta_0$和$\beta_1$为回归系数，$\mu_1$为无法观测的且满足一定条件的扰动项
+   
+
+![](https://www.zhihu.com/equation?tex=%0A%20%20%20y_i%3D%5Cbeta_0%2B%5Cbeta_1x_1%2B%5Cmu_i%0A%20%20%20)
+
+   ![](https://www.zhihu.com/equation?tex=%5Cbeta_0)和![](https://www.zhihu.com/equation?tex=%5Cbeta_1)为回归系数，![](https://www.zhihu.com/equation?tex=%5Cmu_1)为无法观测的且满足一定条件的扰动项
 
    令预测值
-   $$
-   \hat{y_i}=\hat{\beta_0}+\hat{\beta_1}x_1
-   $$
-   我们称$\hat{\mu_i}=y_i-\hat{y_i}$为残差
+
+![](https://www.zhihu.com/equation?tex=%0A%20%20%20%5Chat%7By_i%7D%3D%5Chat%7B%5Cbeta_0%7D%2B%5Chat%7B%5Cbeta_1%7Dx_1%0A%20%20%20)
+
+   我们称![](https://www.zhihu.com/equation?tex=%5Chat%7B%5Cmu_i%7D%3Dy_i-%5Chat%7By_i%7D)为残差
 
    > 线性假定并不要求初始模型都呈上述的严格线性关系，自变量与因变量可通过变量替换而转化成线性模型(以下模型都是线性模型)
-   > $$
-   > y_i=\beta_0+\beta_1\ln{x_i}+\mu_i \\ \ln{y_i}=\beta_0+\beta_1\ln{x_i}+\mu_i \\ y_i=\beta_0+\beta_1x_1+\beta_2x_i^2+\mu_i \\ y_i=\beta_0+\beta_1x_{1i}+\beta_2x_{2i}+\delta x_{1i}x_{2i}+\mu_i
-   > $$
+   > 
+![](https://www.zhihu.com/equation?tex=%0A%20%20%20%3E%20y_i%3D%5Cbeta_0%2B%5Cbeta_1%5Cln%7Bx_i%7D%2B%5Cmu_i%20%5C%5C%20%5Cln%7By_i%7D%3D%5Cbeta_0%2B%5Cbeta_1%5Cln%7Bx_i%7D%2B%5Cmu_i%20%5C%5C%20y_i%3D%5Cbeta_0%2B%5Cbeta_1x_1%2B%5Cbeta_2x_i%5E2%2B%5Cmu_i%20%5C%5C%20y_i%3D%5Cbeta_0%2B%5Cbeta_1x_%7B1i%7D%2B%5Cbeta_2x_%7B2i%7D%2B%5Cdelta%20x_%7B1i%7Dx_%7B2i%7D%2B%5Cmu_i%0A%20%20%20%3E%20)
+
    > 这种数据预处理用Excel(推荐)、MATLAB、STATA等软件都可以
 
 ## 自变量的选取
@@ -120,12 +121,12 @@ tags:
 
    - 内生性：遗漏变量对回归系数的影响非常大，称该回归模型具有内生性
 
-   - 外生性：假设模型为：$y=\beta_0+\beta_1x_1+\beta_2x_2+\cdots+\beta_kx_k+\mu$，$\mu$为无法观测的且满足一定条件的扰动项(误差项)。如果满足$\mu$与所有的自变量都不相关，则该模型具有外生性
+   - 外生性：假设模型为：![](https://www.zhihu.com/equation?tex=y%3D%5Cbeta_0%2B%5Cbeta_1x_1%2B%5Cbeta_2x_2%2B%5Ccdots%2B%5Cbeta_kx_k%2B%5Cmu)，![](https://www.zhihu.com/equation?tex=%5Cmu)为无法观测的且满足一定条件的扰动项(误差项)。如果满足![](https://www.zhihu.com/equation?tex=%5Cmu)与所有的自变量都不相关，则该模型具有外生性
 
 2. 核心解释变量和控制变量
    - 核心解释变量：我们最感兴趣的变量，因此我们特别希望得到对其系数的一致估计。
    - 控制变量：我们可能对于这些变量本身并无太大兴趣；而之所以把它们也放入回归方程，主要是为了 “控制住” 那些对因变量有影响的遗漏因素。
-   - 在实际应用中，我们只要保证核心解释变量与$\mu$不相关即可。
+   - 在实际应用中，我们只要保证核心解释变量与![](https://www.zhihu.com/equation?tex=%5Cmu)不相关即可。
    
 3. 虚拟变量(重要)
 
@@ -142,11 +143,12 @@ tags:
 ## 回归系数的解释
 
 - 回归系数的解释
-  $$
-  y_i=\beta_0+\beta_1x_{1i}+\beta_2x_{2i}+\cdots+\beta_kx_{ki}+\mu_i \\ \Downarrow \\ \hat{y_i}=\hat{\beta_0}+\hat{\beta_1}x_{1i}+\hat{\beta_2}x_{2i}+\cdots+\hat{\beta_k}x_{ki}
-  $$
-  $\hat{\beta_0}$的意义一般不考虑，$\hat{\beta_m}(m=1,2,\cdots,k)$指控制其他自变量不变时。$x_m$每层加一个单位，对$y_i$造成的变化。
   
+
+![](https://www.zhihu.com/equation?tex=%0A%20%20y_i%3D%5Cbeta_0%2B%5Cbeta_1x_%7B1i%7D%2B%5Cbeta_2x_%7B2i%7D%2B%5Ccdots%2B%5Cbeta_kx_%7Bki%7D%2B%5Cmu_i%20%5C%5C%20%5CDownarrow%20%5C%5C%20%5Chat%7By_i%7D%3D%5Chat%7B%5Cbeta_0%7D%2B%5Chat%7B%5Cbeta_1%7Dx_%7B1i%7D%2B%5Chat%7B%5Cbeta_2%7Dx_%7B2i%7D%2B%5Ccdots%2B%5Chat%7B%5Cbeta_k%7Dx_%7Bki%7D%0A%20%20)
+
+  ![](https://www.zhihu.com/equation?tex=%5Chat%7B%5Cbeta_0%7D)的意义一般不考虑，![](https://www.zhihu.com/equation?tex=%5Chat%7B%5Cbeta_m%7D%28m%3D1%2C2%2C%5Ccdots%2Ck%29)指控制其他自变量不变时。![](https://www.zhihu.com/equation?tex=x_m)每层加一个单位，对![](https://www.zhihu.com/equation?tex=y_i)造成的变化。
+
 - 四种模型回归系数的解释
 
   1. 一元线性回归：𝑦 = 𝑎 + 𝑏𝑥 + 𝜇，x每增加1个单位，y平均变化b个单位
@@ -217,9 +219,9 @@ tags:
 
   Number of obs
 
-  F(k, obs-k-1)  (联合显著性检验，原假设：$\beta_1=\cdots=\beta_k=0$)
+  F(k, obs-k-1)  (联合显著性检验，原假设：![](https://www.zhihu.com/equation?tex=%5Cbeta_1%3D%5Ccdots%3D%5Cbeta_k%3D0))
 
-  Prob > F  (Prob为P值，联合显著性检验，原假设：$\beta_1=\cdots=\beta_k=0$)
+  Prob > F  (Prob为P值，联合显著性检验，原假设：![](https://www.zhihu.com/equation?tex=%5Cbeta_1%3D%5Ccdots%3D%5Cbeta_k%3D0))
 
   R-squared
 
@@ -227,11 +229,11 @@ tags:
 
   Root MSE
 
-  | y(因变量)           | Coef.(回归系数) | Std. Err.(回归系数的标准误差) | t    | P>$\abs{t}$ | [95% Conf. Interval] |
-  | ------------------- | --------------- | ----------------------------- | ---- | ----------- | -------------------- |
-  | x1                  |                 |                               |      |             |                      |
-  | x2                  |                 |                               |      |             |                      |
-  | _cons(常数项，即β0) |                 |                               |      |             |                      |
+  | y(因变量)           | Coef.(回归系数) | Std. Err.(回归系数的标准误差) | t    | P><img src="https://alps-images.obs.cn-east-2.myhuaweicloud.com/img/image-20230722194204258.png" alt="image-20230722194204258" style="zoom:70%;" /> | [95% Conf. Interval] |
+  | ------------------- | --------------- | ----------------------------- | ---- | ------------------------------------------------------------ | -------------------- |
+  | x1                  |                 |                               |      |                                                              |                      |
+  | x2                  |                 |                               |      |                                                              |                      |
+  | _cons(常数项，即β0) |                 |                               |      |                                                              |                      |
   
   上表中第五列P值最有用，其他不用看。P值小于0.05，表示在95%置信水平下，该回归系数显著的异于0。P值大于置信水平的项就不用看了。
   
@@ -254,9 +256,9 @@ tags:
 > 注：我们一般使用调整后的拟合优度Adj R squared
 >
 > 我们引入的自变量越多，拟合优度会变大。但我们倾向于使用调整后的拟合优度，如果新引入的自变量对SSE的减少程度特别少，那么调整后的拟合优度反而会减小。（这句话可以放入论文中作解释）
-> $$
-> R_{adjusted}^2=1-\frac{SSE/(n-k-1)}{SST/(n-1)}
-> $$
+> 
+![](https://www.zhihu.com/equation?tex=%0A%3E%20R_%7Badjusted%7D%5E2%3D1-%5Cfrac%7BSSE/%28n-k-1%29%7D%7BSST/%28n-1%29%7D%0A%3E%20)
+
 
 ### 标准化回归系数
 
@@ -274,7 +276,7 @@ tags:
 
 1. 在回归分析之前数据不要进行归一化处理，否则回归系数不好解释。
 
-2. 在回归模型的解释部分，要写出求得的具体回归系数是多少($\hat{\beta_0,}\hat{\beta_1},\dots$)
+2. 在回归模型的解释部分，要写出求得的具体回归系数是多少(![](https://www.zhihu.com/equation?tex=%5Chat%7B%5Cbeta_0%2C%7D%5Chat%7B%5Cbeta_1%7D%2C%5Cdots))
 
    还要写出回归系数的显著性。
 

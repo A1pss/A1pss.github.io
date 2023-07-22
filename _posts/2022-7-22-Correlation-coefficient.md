@@ -22,17 +22,17 @@ tags:
 
 ### 总体皮尔逊相关系数
 
-1. 如果两组数据$X:\{X_1,X_2,\dots,X_n\}$和$Y:\{Y_1,Y_2,\dots,Y_3\}$是**总体数据**（例如普查结果），
+1. 如果两组数据![](https://www.zhihu.com/equation?tex=X%3A%5C%7BX_1%2CX_2%2C%5Cdots%2CX_n%5C%7D)和![](https://www.zhihu.com/equation?tex=Y%3A%5C%7BY_1%2CY_2%2C%5Cdots%2CY_3%5C%7D)是**总体数据**（例如普查结果)，
 
-   那么总体均值：$E(x)=\frac{\sum_{i=1}^nX_i}{n},E(Y)=\frac{\sum_{i=1}^nY_i}{n}$
+   那么总体均值：![](https://www.zhihu.com/equation?tex=E%28x%29%3D%5Cfrac%7B%5Csum_%7Bi%3D1%7D%5EnX_i%7D%7Bn%7D%2CE%28Y%29%3D%5Cfrac%7B%5Csum_%7Bi%3D1%7D%5EnY_i%7D%7Bn%7D)
 
-   总体协方差：$Cov(X,Y)=\frac{\sum_{i=1}^n(X_i-E(X))(Y_i-E(Y))}{n}$
+   总体协方差：![](https://www.zhihu.com/equation?tex=Cov%28X%2CY%29%3D%5Cfrac%7B%5Csum_%7Bi%3D1%7D%5En%28X_i-E%28X%29%29%28Y_i-E%28Y%29%29%7D%7Bn%7D)
 
-   **总体Pearson相关系数：$\rho _{XY}=\frac{Cov(X,Y)}{\sigma_X\sigma_Y}=\frac{\sum_{i=1}^n\frac{(X_i-E(X))}{\sigma_X}\frac{(X_i-E(Y))}{\sigma_Y}}{n}$**
+   **总体Pearson相关系数：![](https://www.zhihu.com/equation?tex=%5Crho%20_%7BXY%7D%3D%5Cfrac%7BCov%28X%2CY%29%7D%7B%5Csigma_X%5Csigma_Y%7D%3D%5Cfrac%7B%5Csum_%7Bi%3D1%7D%5En%5Cfrac%7B%28X_i-E%28X%29%29%7D%7B%5Csigma_X%7D%5Cfrac%7B%28X_i-E%28Y%29%29%7D%7B%5Csigma_Y%7D%7D%7Bn%7D)**
 
-   $\sigma_X(sigma\ X)$是$X$的标准差，$\sigma_X=\sqrt{\frac{\sum_{i=1}^n(X_i-E(X))^2}{n}},\sigma_Y=\sqrt{\frac{\sum_{i=1}^n(Y_i-E(Y))^2}{n}}$
+   ![](https://www.zhihu.com/equation?tex=%5Csigma_X%28sigma%5C%20X%29)是![](https://www.zhihu.com/equation?tex=X)的标准差，![](https://www.zhihu.com/equation?tex=%5Csigma_X%3D%5Csqrt%7B%5Cfrac%7B%5Csum_%7Bi%3D1%7D%5En%28X_i-E%28X%29%29%5E2%7D%7Bn%7D%7D%2C%5Csigma_Y%3D%5Csqrt%7B%5Cfrac%7B%5Csum_%7Bi%3D1%7D%5En%28Y_i-E%28Y%29%29%5E2%7D%7Bn%7D%7D)
 
-   **可以证明，$\abs{\rho_{XY}}\leqslant1$，且当$Y=aX+b$时，$\rho_{XY}=\cases{1\ \ \ ,a>0\\-1,a<0}$**
+   **可以证明，<img src="https://alps-images.obs.cn-east-2.myhuaweicloud.com/img/image-20230722193943714.png" style="zoom:70%;" />，且当![](https://www.zhihu.com/equation?tex=Y%3DaX%2Bb)时，![](https://www.zhihu.com/equation?tex=%5Crho_%7BXY%7D%3D%5Ccases%7B1%5C%20%5C%20%5C%20%2Ca%3E0%5C%5C-1%2Ca%3C0%7D)**
 
    - 直观理解协方差：如果X、Y变化方向相同，即当X大于（小于）其均值时，Y也大于（小于）其均值，在这两种情况下，乘积为正。如果X、Y的变化方向一直保持相同，则协方差为正；同理，如果X、Y变化方向一直相反，则协方差为负；如果X、Y变化方向之间相互无规律，即分子中有的项为正，有的项为负，那么累加后正负抵消。
 
@@ -42,17 +42,17 @@ tags:
 
 ### 样本皮尔逊相关系数
 
-1. 假设有两组样本数据$X:\{X_1,X_2,\dots,X_n\}$和$Y:\{Y_1,Y_2,\dots,Y_n\}$（一般调查得到的数据均为样本数据）
+1. 假设有两组样本数据![](https://www.zhihu.com/equation?tex=X%3A%5C%7BX_1%2CX_2%2C%5Cdots%2CX_n%5C%7D)和![](https://www.zhihu.com/equation?tex=Y%3A%5C%7BY_1%2CY_2%2C%5Cdots%2CY_n%5C%7D)（一般调查得到的数据均为样本数据）
 
-   样本均值：$\overline{X}=\frac{\sum_{i=1}^nX_i}{n},\overline{Y}=\frac{\sum_{i=1}^nY_i}{n}$
+   样本均值：![](https://www.zhihu.com/equation?tex=%5Coverline%7BX%7D%3D%5Cfrac%7B%5Csum_%7Bi%3D1%7D%5EnX_i%7D%7Bn%7D%2C%5Coverline%7BY%7D%3D%5Cfrac%7B%5Csum_%7Bi%3D1%7D%5EnY_i%7D%7Bn%7D)
 
-   样本协方差：$Cov(X,Y)=\frac{\sum_{i=1}^n(X_i-\overline{X})(Y_I-\overline{Y})}{n-1}$
+   样本协方差：![](https://www.zhihu.com/equation?tex=Cov%28X%2CY%29%3D%5Cfrac%7B%5Csum_%7Bi%3D1%7D%5En%28X_i-%5Coverline%7BX%7D%29%28Y_I-%5Coverline%7BY%7D%29%7D%7Bn-1%7D)
 
-   **样本Pearson相关系数：**$r_{X,Y}=\frac{Cov(X,Y)}{S_XS_Y}$
+   **样本Pearson相关系数：**![](https://www.zhihu.com/equation?tex=r_%7BX%2CY%7D%3D%5Cfrac%7BCov%28X%2CY%29%7D%7BS_XS_Y%7D)
 
-   其中：$S_X(sigma\ X)$是$X$的样本标准差，$S_X=\sqrt{\frac{\sum_{i=1}^n(X_i-\overline{X})^2}{n-1}}$,
+   其中：![](https://www.zhihu.com/equation?tex=S_X%28sigma%5C%20X%29)是![](https://www.zhihu.com/equation?tex=X)的样本标准差，![](https://www.zhihu.com/equation?tex=S_X%3D%5Csqrt%7B%5Cfrac%7B%5Csum_%7Bi%3D1%7D%5En%28X_i-%5Coverline%7BX%7D%29%5E2%7D%7Bn-1%7D%7D),
 
-   同理$S_Y=\sqrt{\frac{\sum_{i=1}^n(Y_i-\overline{Y})^2}{n-1}}$
+   同理![](https://www.zhihu.com/equation?tex=S_Y%3D%5Csqrt%7B%5Cfrac%7B%5Csum_%7Bi%3D1%7D%5En%28Y_i-%5Coverline%7BY%7D%29%5E2%7D%7Bn-1%7D%7D)
 
 ### 结论
 
@@ -178,34 +178,35 @@ tags:
 
        **适合大样本（n>30）**
 
-       对一个随机变量$\{X_i\}$，假设其偏度为$S$，峰度为$K$，那么我们可以构造统计量:
-       $$
-       JB=\frac{n}{6}[S^2+\frac{(K-3)^2}{4}]
-       $$
-       可以证明，如果$\{X_i\}$是正态分布，那么在大样本情况下$JB\sim\chi^2(2)$（自由度为2的$\chi_2$分布）
+       对一个随机变量![](https://www.zhihu.com/equation?tex=%5C%7BX_i%5C%7D)，假设其偏度为![](https://www.zhihu.com/equation?tex=S)，峰度为![](https://www.zhihu.com/equation?tex=K)，那么我们可以构造统计量:
+       
 
+![](https://www.zhihu.com/equation?tex=%0A%20%20%20%20%20%20%20JB%3D%5Cfrac%7Bn%7D%7B6%7D%5BS%5E2%2B%5Cfrac%7B%28K-3%29%5E2%7D%7B4%7D%5D%0A%20%20%20%20%20%20%20)
+
+       可以证明，如果![](https://www.zhihu.com/equation?tex=%5C%7BX_i%5C%7D)是正态分布，那么在大样本情况下![](https://www.zhihu.com/equation?tex=JB%5Csim%5Cchi%5E2%282%29)（自由度为2的![](https://www.zhihu.com/equation?tex=%5Cchi_2)分布）
+    
        *注：正态分布的偏度为0，峰度为3*
-
+    
        那么进行假设检验的步骤如下：
-
-       $H_0$: 该随机变量符合正态分布；$H_1$该随机变量不服从正态分布
-
-       然后计算该变量的偏度和峰度，得到检验值$JB^*$，并计算出对应的p值。将p值与0.05比较，如果小于0.05则可拒绝原假设，否则不能拒绝原假设。
-
-       > 偏度: $E[(\frac{X-u}{\sigma})^3]$
+    
+       ![](https://www.zhihu.com/equation?tex=H_0): 该随机变量符合正态分布；![](https://www.zhihu.com/equation?tex=H_1)该随机变量不服从正态分布
+    
+       然后计算该变量的偏度和峰度，得到检验值![](https://www.zhihu.com/equation?tex=JB%5E%2A)，并计算出对应的p值。将p值与0.05比较，如果小于0.05则可拒绝原假设，否则不能拒绝原假设。
+    
+       > 偏度: ![](https://www.zhihu.com/equation?tex=E%5B%28%5Cfrac%7BX-u%7D%7B%5Csigma%7D%29%5E3%5D)
        >
-       > 峰度: $E[(\frac{X-u}{\sigma})^4]$
+       > 峰度: ![](https://www.zhihu.com/equation?tex=E%5B%28%5Cfrac%7BX-u%7D%7B%5Csigma%7D%29%5E4%5D)
        >
        > ```matlab
        > x = normrnd(a,b,c,d); %生成c*d的随机向量，每个元素均值为a，标准差为b的正态分布
        > skewness(x) %偏度
        > kurtosis(x) %峰度
        > ```
-
+    
        MATLAB代码:
-
+    
        MATLAB中进行JB检验的语法：**[h,p] = jbtest(x,alpha)** 当输出h等于1时，表示拒绝原假设；h等于0则代表不能拒绝原假设。 alpha就是显著性水平，一般取0.05，此时置信水平为1‐0.05=0.95 x 就是我们要检验的随机变量，注意这里的 x 只能是向量。
-
+    
        ```matlab
         %% 正态分布检验
         % 检验第一列数据是否为正态分布
@@ -222,28 +223,28 @@ tags:
         disp(H)
         disp(P)
        ```
-
+    
     2. 夏皮洛‐威尔克检验 (Shapiro‐wilk) :
-
+    
        **适合小样本 (3≤n≤50)**
-
-       $H_0$: 该随机变量符合正态分布；$H_1$该随机变量不服从正态分布
-
+    
+       ![](https://www.zhihu.com/equation?tex=H_0): 该随机变量符合正态分布；![](https://www.zhihu.com/equation?tex=H_1)该随机变量不服从正态分布
+    
        计算出威尔克统计量后，得到相应的p值。将p值与0.05比较，如果小于0.05则课拒绝原假设，否则不能拒绝原假设
-
+    
        见SPSS.3
-
+    
     3. Q-Q图:
-
+    
        **要求数据量非常大**
-
+    
        Q‐Q图 (Q代表分位数Quantile) 是一种通过比较两个概
        率分布的分位数对这两个概率分布进行比较的概率图方法。
-
+    
        这里选择正态分布和要检验的随机变量取分位数，并对其做出QQ图。如果要检验的随机变量是正态分布，那么QQ图就是一条直线。（看Q‐Q图上的点是否近似地在一条直线附近）
-
+    
        `qqplot(Test(:,1))`
-
+    
        <img src="https://alps-images.obs.cn-east-2.myhuaweicloud.com/img/image-20230722143556244.png" alt="image-20230722143556244" style="zoom:67%;" />
 
 2. **实验数据之间的差距不能太大。**皮尔逊相关性系数受异常值影响比较大。
@@ -251,23 +252,23 @@ tags:
 
 #### 具体步骤
 
-1. 提出原假设$H_0$和备择假设$H_1$（两个假设是截然相反的）
+1. 提出原假设![](https://www.zhihu.com/equation?tex=H_0)和备择假设![](https://www.zhihu.com/equation?tex=H_1)（两个假设是截然相反的）
 
-   假设我们计算出了一个皮尔逊相关系数r，我们想检验它是否显著的异于0.那么我们可以这样设定原假设和备择假设：$H_0:r=0,\ H_1:r\neq0$
+   假设我们计算出了一个皮尔逊相关系数r，我们想检验它是否显著的异于0.那么我们可以这样设定原假设和备择假设：![](https://www.zhihu.com/equation?tex=H_0%3Ar%3D0%2C%5C%20H_1%3Ar%5Cneq0)
 
 2. 在原假设成立的条件下，利用我们要检验的量构造出一个符合某一分布的统计量
 
-   对于皮尔逊相关系数 $r$ 而言，在满足一定条件下，我们可以构造统计量:
+   对于皮尔逊相关系数 ![](https://www.zhihu.com/equation?tex=r) 而言，在满足一定条件下，我们可以构造统计量:
 
-   $t=r\sqrt{\frac{n-2}{1-r^2}}$，可以证明 $t$ 是服从自由度的 $n-2$ 的 $t$ 分布
+   ![](https://www.zhihu.com/equation?tex=t%3Dr%5Csqrt%7B%5Cfrac%7Bn-2%7D%7B1-r%5E2%7D%7D)，可以证明 ![](https://www.zhihu.com/equation?tex=t) 是服从自由度的 ![](https://www.zhihu.com/equation?tex=n-2) 的 ![](https://www.zhihu.com/equation?tex=t) 分布
 
    *(注1：统计量相当于我们要检验的量的一个函数，里面不能有其他的随机变量)*
 
-   *(注2：这里的分布一般有四种：标准正态分布，$t$分布，$\chi^2$分布和 $F$ 分布)*
+   *(注2：这里的分布一般有四种：标准正态分布，![](https://www.zhihu.com/equation?tex=t)分布，![](https://www.zhihu.com/equation?tex=%5Cchi%5E2)分布和 ![](https://www.zhihu.com/equation?tex=F) 分布)*
 
 3. 将我们要检验的这个值（相关系数 r 和样本 n）带入这个统计量中，可以得到一个特定的值（检验值）
 
-4. 由于我们知道统计量的分布情况因此我们可以画出该分布的概率密度函数 (pdf)，并给定一个置信水平，根据这个置信水平查$t/\chi^2/F$分布表找到临界值，并画出检验统计量的接受域和拒绝域。
+4. 由于我们知道统计量的分布情况因此我们可以画出该分布的概率密度函数 (pdf)，并给定一个置信水平，根据这个置信水平查![](https://www.zhihu.com/equation?tex=t/%5Cchi%5E2/F)分布表找到临界值，并画出检验统计量的接受域和拒绝域。
 
    常见的置信水平有三个：90%，95%和99%，其中95%是三者中最为常用的。
 
@@ -284,7 +285,7 @@ tags:
 
 5. 看第3步计算出来的检验值是落在了拒绝域还是接受域
 
-   下结论：在···%的置信水平上，我们拒绝/无法拒绝原假设$H_0:r=0$，因此$r$是/否显著不为0的。
+   下结论：在···%的置信水平上，我们拒绝/无法拒绝原假设![](https://www.zhihu.com/equation?tex=H_0%3Ar%3D0)，因此![](https://www.zhihu.com/equation?tex=r)是/否显著不为0的。
 
 6. 显著性标记：
 
@@ -299,7 +300,7 @@ tags:
 #### 总结
 
 1. 提出原假设和备择假设
-2. 构造统计量：标准正态分布，$t$分布，$\chi^2$分布和 $F$ 分布
+2. 构造统计量：标准正态分布，![](https://www.zhihu.com/equation?tex=t)分布，![](https://www.zhihu.com/equation?tex=%5Cchi%5E2)分布和 ![](https://www.zhihu.com/equation?tex=F) 分布
 3. 代值入统计量，算出检验值
 4. 画出概率密度函数，给出置信水平，找到临界值，得到接受域和拒绝域
 5. 下结论：r是否显著为0 (本例拒绝原假设以为皮尔逊系数显著异于0)
@@ -309,7 +310,7 @@ tags:
 
 1. 计算p值
 
-   前三步和上述一样，得到检验值$t^*$
+   前三步和上述一样，得到检验值![](https://www.zhihu.com/equation?tex=t%5E%2A)
 
    **利用累积分布函数 (CDF) : `tcdf(t,自由度)`**
 
@@ -346,12 +347,12 @@ tags:
 ### 定义
 
 X和Y为两组数据，其斯皮尔曼(等级)相关系数：
-$$
-r_s=1-\frac{6\sum_{i=1}^nd_i^2}{n(n^2-1)}
-$$
-其中，$d_i$为$X_i$和$Y_i$之间的等级差。(一个数的等级，就是将它所在的一列数按照从小到大排序后，这个数所在的位置)
 
-可以证明：$r_s$位于1和-1之间
+![](https://www.zhihu.com/equation?tex=%0Ar_s%3D1-%5Cfrac%7B6%5Csum_%7Bi%3D1%7D%5End_i%5E2%7D%7Bn%28n%5E2-1%29%7D%0A)
+
+其中，![](https://www.zhihu.com/equation?tex=d_i)为![](https://www.zhihu.com/equation?tex=X_i)和![](https://www.zhihu.com/equation?tex=Y_i)之间的等级差。(一个数的等级，就是将它所在的一列数按照从小到大排序后，这个数所在的位置)
+
+可以证明：![](https://www.zhihu.com/equation?tex=r_s)位于1和-1之间
 
 > 注：如果有的数值相同，则将他们所在的位置取算术平均。
 
@@ -369,21 +370,21 @@ $$
 
 ### 斯皮尔曼相关系数的假设检验
 
-#### 小样本($n\leqslant 30$)
+#### 小样本(![](https://www.zhihu.com/equation?tex=n%5Cleqslant%2030))
 
 直接查临界值表即可。
-$$
-H_0:r_s=0\\H_1:r_s\neq0
-$$
+
+![](https://www.zhihu.com/equation?tex=%0AH_0%3Ar_s%3D0%5C%5CH_1%3Ar_s%5Cneq0%0A)
+
 <img src="https://alps-images.obs.cn-east-2.myhuaweicloud.com/img/image-20230722143628518.png" alt="image-20230722143628518" style="zoom:80%;" />
 
 #### 大样本
 
-统计量$r_s\sqrt{n-1}\sim N(0,1)$
+统计量![](https://www.zhihu.com/equation?tex=r_s%5Csqrt%7Bn-1%7D%5Csim%20N%280%2C1%29)
 
-$H_0:r_s=0;\ H_1:r_s\neq0$
+![](https://www.zhihu.com/equation?tex=H_0%3Ar_s%3D0%3B%5C%20H_1%3Ar_s%5Cneq0)
 
-我们计算检验值$r_s\sqrt{n-1}$，并求出对应的p值与0.05相比即可。
+我们计算检验值![](https://www.zhihu.com/equation?tex=r_s%5Csqrt%7Bn-1%7D)，并求出对应的p值与0.05相比即可。
 
 p值大于0.05，无法拒绝原假设(和0没有显著的差异)；
 

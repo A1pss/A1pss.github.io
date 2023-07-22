@@ -22,9 +22,9 @@ tags:
 
 1. 最小二乘法原理
 
-$$
-\hat{y}_i=kx_i+b\\\hat{k},\hat{b}=\mathop{arg\min}_{k,b}(\sum_{i=1}^n{(y_i-\hat{y}_i)^2})\\\hat{k}=\frac{n\sum_{i=1}^{n}{x_iy_i}-\sum_{i=1}^{n}{y_i}\sum_{i=1}^{n}{x_i}}{n\sum_{i=1}^{n}{x_i}^2-\sum_{i=1}^{n}{x_i}\sum_{i=1}^{n}{x_i}},\\\hat{b}=\frac{\sum_{i=1}^{n}{x_i}^2\sum_{i=1}^{n}{y_i}-\sum_{i=1}^{n}{x_i}\sum_{i=1}^{n}{x_iy_i}}{n\sum_{i=1}^{n}{x_i}^2-\sum_{i=1}^{n}{x_i}\sum_{i=1}^{n}{x_i}}
-$$
+
+![](https://www.zhihu.com/equation?tex=%0A%5Chat%7By%7D_i%3Dkx_i%2Bb%5C%5C%5Chat%7Bk%7D%2C%5Chat%7Bb%7D%3D%5Cmathop%7Barg%5Cmin%7D_%7Bk%2Cb%7D%28%5Csum_%7Bi%3D1%7D%5En%7B%28y_i-%5Chat%7By%7D_i%29%5E2%7D%29%5C%5C%5Chat%7Bk%7D%3D%5Cfrac%7Bn%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%7Bx_iy_i%7D-%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%7By_i%7D%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%7Bx_i%7D%7D%7Bn%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%7Bx_i%7D%5E2-%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%7Bx_i%7D%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%7Bx_i%7D%7D%2C%5C%5C%5Chat%7Bb%7D%3D%5Cfrac%7B%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%7Bx_i%7D%5E2%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%7By_i%7D-%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%7Bx_i%7D%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%7Bx_iy_i%7D%7D%7Bn%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%7Bx_i%7D%5E2-%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%7Bx_i%7D%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%7Bx_i%7D%7D%0A)
+
 
 *此例设曲线为直线*
 
@@ -69,40 +69,40 @@ $$
 
 3. 如何评价拟合的好坏？
 
-   拟合优度（可决系数）$R^2$
+   拟合优度（可决系数）![](https://www.zhihu.com/equation?tex=R%5E2)
 
-   总体平方和SST (Total sum of squares): $SST=\sum_{i=1}^n{(y_i-\overline y)^2}$
+   总体平方和SST (Total sum of squares): ![](https://www.zhihu.com/equation?tex=SST%3D%5Csum_%7Bi%3D1%7D%5En%7B%28y_i-%5Coverline%20y%29%5E2%7D)
 
-   误差平方和SSE (The sum of squares due to error): $SSE=\sum_{i=1}^n(y_i-\hat y_i)^2$
+   误差平方和SSE (The sum of squares due to error): ![](https://www.zhihu.com/equation?tex=SSE%3D%5Csum_%7Bi%3D1%7D%5En%28y_i-%5Chat%20y_i%29%5E2)
 
-   回归平方和SSR (Sum of squares of the regression): $SSR=\sum_{i=1}^n(\hat y_i-\overline y)^2$
+   回归平方和SSR (Sum of squares of the regression): ![](https://www.zhihu.com/equation?tex=SSR%3D%5Csum_%7Bi%3D1%7D%5En%28%5Chat%20y_i-%5Coverline%20y%29%5E2)
 
    
 
    可以证明：SST = SSE + SSR (证明过程见《拟合》p10)
 
-   拟合优度：$0\leqslant R^2=\frac{SSR}{SST}=\frac{SST-SSE}{SST}=1-\frac{SSE}{SST}\leqslant 1$ 
+   拟合优度：![](https://www.zhihu.com/equation?tex=0%5Cleqslant%20R%5E2%3D%5Cfrac%7BSSR%7D%7BSST%7D%3D%5Cfrac%7BSST-SSE%7D%7BSST%7D%3D1-%5Cfrac%7BSSE%7D%7BSST%7D%5Cleqslant%201) 
 
-   $R^2$越接近1，拟合的越好。
+   ![](https://www.zhihu.com/equation?tex=R%5E2)越接近1，拟合的越好。
 
-   - （注意：$R^2$只能用于**线性函数**的拟合结果评价）
+   - （注意：![](https://www.zhihu.com/equation?tex=R%5E2)只能用于**线性函数**的拟合结果评价）
    - 非线性函数和其他函数（例如复杂的指数函数）比较拟合的好坏时，直接看SSE即可
 
 ### 线性函数的介绍
 
-1. 思考：$y=a+bx^2$是线性函数吗？
+1. 思考：![](https://www.zhihu.com/equation?tex=y%3Da%2Bbx%5E2)是线性函数吗？
 
-   答：$y=a+bx^2$是线性函数，可以用$R^2$。因为我们这里所说的线性函数是指对参数为线性（线性于参数）
+   答：![](https://www.zhihu.com/equation?tex=y%3Da%2Bbx%5E2)是线性函数，可以用![](https://www.zhihu.com/equation?tex=R%5E2)。因为我们这里所说的线性函数是指对参数为线性（线性于参数）
 
    - 对变量为线性
    
-     $Y$的条件期望值是$X_i$的线性函数也就是回归曲线为直线
+     ![](https://www.zhihu.com/equation?tex=Y)的条件期望值是![](https://www.zhihu.com/equation?tex=X_i)的线性函数也就是回归曲线为直线
    
    - 对参数为线性
    
-     $Y$的条件期望$E(Y|X_i)$是参数$\beta$的一个线性函数；
+     ![](https://www.zhihu.com/equation?tex=Y)的条件期望![](https://www.zhihu.com/equation?tex=E%28Y%7CX_i%29)是参数![](https://www.zhihu.com/equation?tex=%5Cbeta)的一个线性函数；
    
-     在函数中，参数仅以一次方出现，且不能乘以或除以其他任何的参数，并不能出现参数的复合函数形式，则为对参数为线性，并可以使用$R^2$.
+     在函数中，参数仅以一次方出现，且不能乘以或除以其他任何的参数，并不能出现参数的复合函数形式，则为对参数为线性，并可以使用![](https://www.zhihu.com/equation?tex=R%5E2).
 
 ## MATLAB中cftools的使用
 

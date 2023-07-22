@@ -29,31 +29,31 @@ tags:
 #### 数学理论
 
 - 线性概率模型(LPM)
-  $$
-  y_i=\beta_0+\beta_1x_{1i}+\beta_1x_{2i}+\cdots+\beta_kx_{ki}+\mu_i
-  $$
-  写成向量乘机形式：$y_i=x_i'\beta+\mu_i\ (i=1,2,\cdots,n)$
+  
+![](https://www.zhihu.com/equation?tex=%0A%20%20y_i%3D%5Cbeta_0%2B%5Cbeta_1x_%7B1i%7D%2B%5Cbeta_1x_%7B2i%7D%2B%5Ccdots%2B%5Cbeta_kx_%7Bki%7D%2B%5Cmu_i%0A%20%20)
 
-  问题1(内生性问题)：yi只能取0或1，也就是μi会是$1-x_i'\beta或-x_i'\beta$，与自变量都有关。
+  写成向量乘机形式：![](https://www.zhihu.com/equation?tex=y_i%3Dx_i%27%5Cbeta%2B%5Cmu_i%5C%20%28i%3D1%2C2%2C%5Ccdots%2Cn%29)
+
+  问题1(内生性问题)：yi只能取0或1，也就是μi会是![](https://www.zhihu.com/equation?tex=1-x_i%27%5Cbeta%E6%88%96-x_i%27%5Cbeta)，与自变量都有关。
 
   问题2：预测值可能会出现 >1 或 <0 的情况。
 
 - 两点分布(伯努利分布)
 
-  设两个事件其中一个事件的概率是$F(x,\beta)$，称 F 为连接函数，它将x和y连接起来
+  设两个事件其中一个事件的概率是![](https://www.zhihu.com/equation?tex=F%28x%2C%5Cbeta%29)，称 F 为连接函数，它将x和y连接起来
 
 - 连接函数的取法
 
-  1. $F(x,\beta)$可以取为标准正态分布的累计密度函数(cdf)：
-     $$
-     F(x,\beta)=\Phi(x_i'\beta)=\int_{-\infty}^{x_i'\beta}\frac{1}{\sqrt{2\pi}}e^{-\frac{t^2}{2}}dt
-     $$
+  1. ![](https://www.zhihu.com/equation?tex=F%28x%2C%5Cbeta%29)可以取为标准正态分布的累计密度函数(cdf)：
+     
+![](https://www.zhihu.com/equation?tex=%0A%20%20%20%20%20F%28x%2C%5Cbeta%29%3D%5CPhi%28x_i%27%5Cbeta%29%3D%5Cint_%7B-%5Cinfty%7D%5E%7Bx_i%27%5Cbeta%7D%5Cfrac%7B1%7D%7B%5Csqrt%7B2%5Cpi%7D%7De%5E%7B-%5Cfrac%7Bt%5E2%7D%7B2%7D%7Ddt%0A%20%20%20%20%20)
+
      这是probit回归
 
-  2. $F(x,\beta)$可以取为Sigmoid函数：
-     $$
-     F(x,\beta)=S(x_i'\beta)=\frac{exp(x_i'\beta)}{1+xep(x_i'\beta)}
-     $$
+  2. ![](https://www.zhihu.com/equation?tex=F%28x%2C%5Cbeta%29)可以取为Sigmoid函数：
+     
+![](https://www.zhihu.com/equation?tex=%0A%20%20%20%20%20F%28x%2C%5Cbeta%29%3DS%28x_i%27%5Cbeta%29%3D%5Cfrac%7Bexp%28x_i%27%5Cbeta%29%7D%7B1%2Bxep%28x_i%27%5Cbeta%29%7D%0A%20%20%20%20%20)
+
      这是logistic回归。这种回归有解析表达式而上面那种带着积分符号，所以通常计算logistic回归模型。
 
 - 怎么求解logistic回归模型的连接函数
@@ -79,7 +79,7 @@ tags:
 3. 生成的报告
 
    - 分类表：体现预测成功率
-   - 方程中的变量：B列对应回归系数$\hat{\beta_i}$，带入$\hat{y_i}$中假如大于等于0.5则是变量1。
+   - 方程中的变量：B列对应回归系数![](https://www.zhihu.com/equation?tex=%5Chat%7B%5Cbeta_i%7D)，带入![](https://www.zhihu.com/equation?tex=%5Chat%7By_i%7D)中假如大于等于0.5则是变量1。
 
 4. 数据视图中新添的两列：PRE_1是预测值，PGR_1是预测的类别
 
